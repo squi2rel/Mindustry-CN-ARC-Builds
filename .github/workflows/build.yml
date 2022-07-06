@@ -42,11 +42,11 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.TOKEN }}
-          file: Mindustry/desktop/build/libs/Mindustry-CN-ARC-Desktop-${{envs.RELEASE_VERSION}}.jar
+          file: Mindustry/desktop/build/libs/Mindustry-CN-ARC-Desktop-${{env.RELEASE_VERSION}}.jar
           tag: ${{ github.ref }}
       - name: Upload Android artifacts
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.TOKEN }}
-          file: Mindustry/android/build/outputs/apk/debug/Mindustry-CN-ARC-Android-${{envs.RELEASE_VERSION}}.apk
+          file: Mindustry/android/build/outputs/apk/debug/Mindustry-CN-ARC-Android-${{env.RELEASE_VERSION}}.apk
           tag: ${{ github.ref }}
