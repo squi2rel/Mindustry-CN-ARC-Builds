@@ -34,9 +34,9 @@ jobs:
           sed -i 's/"io.anuke.mindustry"/"io.anuke.mindustry.be.arc"/g' android/AndroidManifest.xml
           sed -i 's/Mindustry/Mindustry-CN-ARC/g' android/res/values/strings.xml
           ./gradlew pack
-          ./gradlew desktop:dist android:assembleRelease
+          ./gradlew desktop:dist android:assembleDebug
           mv desktop/build/libs/Mindustry.jar desktop/build/libs/Mindustry-CN-ARC-Desktop-${RELEASE_VERSION}.jar
-          mv android/build/outputs/apk/release/android-release.apk android/build/outputs/apk/release/Mindustry-CN-ARC-Android-${RELEASE_VERSION}.apk
+          mv android/build/outputs/apk/debug/android-debug.apk android/build/outputs/apk/release/Mindustry-CN-ARC-Android-${RELEASE_VERSION}.apk
       - name: Upload desktop artifacts
         uses: svenstaro/upload-release-action@v2
         with:
