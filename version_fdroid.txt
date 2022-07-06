@@ -1,2 +1,2 @@
-versionName=7-fdroid-135
-versionCode=1043
+versionName=CN-ARC-v7-3.7.7
+versionCode=1012
