@@ -41,7 +41,7 @@ jobs:
           ./gradlew desktop:dist -Pbuildversion=${RELEASE_VERSION}
           ./gradlew android:assembleRelease -Pbuildversion=${RELEASE_VERSION}
           mv desktop/build/libs/Mindustry.jar desktop/build/libs/Mindustry-CN-ARC-Desktop-${RELEASE_VERSION}.jar
-          mv android/build/outputs/apk/release/android-release.apk android/build/outputs/apk/debug/Mindustry-CN-ARC-Android-${RELEASE_VERSION}.apk
+          mv android/build/outputs/apk/release/android-release.apk android/build/outputs/apk/release/Mindustry-CN-ARC-Android-${RELEASE_VERSION}.apk
       - name: Upload desktop artifacts
         uses: svenstaro/upload-release-action@v2
         with:
@@ -52,5 +52,5 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.TOKEN }}
-          file: Mindustry/android/build/outputs/apk/debug/Mindustry-CN-ARC-Android-${{env.RELEASE_VERSION}}.apk
+          file: Mindustry/android/build/outputs/apk/release/Mindustry-CN-ARC-Android-${{env.RELEASE_VERSION}}.apk
           tag: ${{ github.ref }}
