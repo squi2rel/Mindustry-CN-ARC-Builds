@@ -30,7 +30,7 @@ jobs:
         env:
           keystore_password: ${{ secrets.KEYSTORE_PASSWORD_SECRET }}
           keystore_alias_password: ${{ secrets.KEYSTORE_PASSWORD_SECRET }}
-          keystore_alias: test
+          keystore_alias: key0
         run: |
           git clone --depth=1 --branch=master https://github.com/CN-ARC/Mindustry-CN-ARC Mindustry
           cd Mindustry
