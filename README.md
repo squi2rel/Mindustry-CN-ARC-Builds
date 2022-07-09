@@ -1,2 +1,3 @@
 # MindustryBuilds
-Latest builds for Mindustry
+Latest builds for CN-ARC build
+学术端更新
