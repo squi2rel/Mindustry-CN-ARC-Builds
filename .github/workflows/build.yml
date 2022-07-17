@@ -60,5 +60,5 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.TOKEN }}
-          file: Mindustry/desktop/build/libs/Mindustry-CN-ARC-Steam-${RELEASE_VERSION}.jar
+          file: Mindustry/desktop/build/libs/Mindustry-CN-ARC-Steam-${env.RELEASE_VERSION}.jar
           tag: ${{ github.ref }}
