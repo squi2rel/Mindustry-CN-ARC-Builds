@@ -35,7 +35,7 @@ jobs:
           keystore_alias_password: ${{ secrets.KEYSTORE_PASSWORD_SECRET }}
           keystore_alias: key0
         run: |
-          git clone --depth=1 --branch=master https://github.com/squi2rel/Mindustry-CN-ARC Mindustry
+          git clone --depth=1 --branch=master git@github.com:squi2rel/Mindustry-CN-ARC Mindustry
           cd Mindustry
           ./gradlew pack
           ./gradlew desktop:dist -Pbuildversion=${RELEASE_VERSION}
