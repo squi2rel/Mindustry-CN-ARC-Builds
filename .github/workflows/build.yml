@@ -29,6 +29,7 @@ jobs:
           mkdir ~/.ssh
           echo "${{ secrets.KEYGIT_BASE64 }}" > key.txt
           base64 --decode --ignore-garbage key.txt > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
       - name: Create artifacts
         env:
           keystore_password: ${{ secrets.KEYSTORE_PASSWORD_SECRET }}
