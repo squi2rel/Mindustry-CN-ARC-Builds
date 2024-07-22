@@ -39,7 +39,7 @@ jobs:
           sed -i 's/Mindustry/Mindustry-CN-ARC/g' android/res/values/strings.xml
           ./gradlew pack
           ./gradlew desktop:dist -Pbuildversion=${RELEASE_VERSION}
-          ./gradlew android:assembleRelease -Pbuildversion=${RELEASE_VERSION}
+          ./gradlew android:assembleRelease -Pbuildversion=${RELEASE_VERSION} -parameters
           mv desktop/build/libs/Mindustry.jar desktop/build/libs/Mindustry-CN-ARC-Desktop-${RELEASE_VERSION}.jar
           mv android/build/outputs/apk/release/android-release.apk android/build/outputs/apk/release/Mindustry-CN-ARC-Android-${RELEASE_VERSION}.apk
           ./gradlew desktop:dist -Pbuildversion=${RELEASE_VERSION} -PversionModifier=steam
